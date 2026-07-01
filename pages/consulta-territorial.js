@@ -50,12 +50,14 @@ departamentoSelector.addEventListener("click", () => {
             departamentoSelector.innerHTML = departamento;
             selectorMunicipio.innerHTML = "Seleccione un municipio";
             modalDepartamentos.style.display = "none";
+            departamentoSelector.classList.remove("abierto");
             actualizarBoton();
         };
 
         listaDepartamentos.appendChild(item);
     });
 
+    departamentoSelector.classList.add("abierto");
     modalDepartamentos.style.display = "block";
 });
 
@@ -63,6 +65,7 @@ departamentoSelector.addEventListener("click", () => {
 modalDepartamentos.addEventListener("click", (e) => {
     if (e.target === modalDepartamentos) {
         modalDepartamentos.style.display = "none";
+        departamentoSelector.classList.remove("abierto");
     }
 });
 
@@ -87,12 +90,14 @@ selectorMunicipio.addEventListener("click", () => {
             municipioSeleccionado = municipio;
             selectorMunicipio.innerHTML = municipio;
             modalMunicipios.style.display = "none";
+            selectorMunicipio.classList.remove("abierto");
             actualizarBoton();
         };
 
         listaMunicipios.appendChild(item);
     });
 
+    selectorMunicipio.classList.add("abierto");
     modalMunicipios.style.display = "block";
 });
 
@@ -100,6 +105,7 @@ selectorMunicipio.addEventListener("click", () => {
 modalMunicipios.addEventListener("click", (e) => {
     if (e.target === modalMunicipios) {
         modalMunicipios.style.display = "none";
+        selectorMunicipio.classList.remove("abierto");
     }
 });
 
@@ -112,7 +118,7 @@ function consultar() {
     const resultado = document.getElementById("resultado");
     resultado.style.display = "block";
     resultado.innerHTML =
-        "<b>📍 Consulta seleccionada:</b><br>" +
+        "<b>Consulta seleccionada:</b><br>" +
         departamentoSeleccionado +
         " - " +
         municipioSeleccionado;
