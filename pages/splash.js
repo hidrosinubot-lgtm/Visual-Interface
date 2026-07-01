@@ -6,4 +6,4 @@ setTimeout(() => {
     setTimeout(() => {
         window.location.href = "consulta-territorial.html";
     }, 600);
-}, 3500);
+}, 4000);
