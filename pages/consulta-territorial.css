@@ -4,7 +4,6 @@ body {
     padding: 20px;
     margin: 0;
 }
-
 .phone {
     width: 100%;
     max-width: 480px;
@@ -15,7 +14,6 @@ body {
     padding: 20px 0;
     animation: fadeInPage 0.6s ease forwards;
 }
-
 @keyframes fadeInPage {
     from {
         opacity: 0;
@@ -26,7 +24,6 @@ body {
         transform: translateY(0);
     }
 }
-
 .icon-wrap {
     width: 100%;
     margin: 10px auto 20px;
@@ -34,13 +31,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .icon-logo {
     width: 200px;
     height: 200px;
     object-fit: contain;
 }
-
 h1 {
     text-align: center;
     color: #0b1f5f;
@@ -48,7 +43,6 @@ h1 {
     font-size: 24px;
     font-weight: 700;
 }
-
 p {
     text-align: center;
     color: #6b7280;
@@ -56,7 +50,6 @@ p {
     font-size: 14px;
     margin-top: 8px;
 }
-
 label {
     display: block;
     margin-top: 24px;
@@ -65,10 +58,9 @@ label {
     color: #0b1f5f;
     font-size: 14px;
 }
-
 .selector {
     width: 100%;
-    padding: 16px;
+    padding: 16px 44px 16px 16px;
     border: 1px solid #d8deea;
     border-radius: 16px;
     font-size: 16px;
@@ -76,13 +68,27 @@ label {
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.2s ease;
+    position: relative;
 }
-
 .selector:hover {
     border-color: #0066cc;
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
-
+.selector::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #6b7280;
+    border-bottom: 2px solid #6b7280;
+    transform: translateY(-65%) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+.selector.abierto::after {
+    transform: translateY(-35%) rotate(225deg);
+}
 button {
     width: 100%;
     margin-top: 30px;
@@ -96,19 +102,16 @@ button {
     cursor: not-allowed;
     transition: all 0.3s ease;
 }
-
 button.activo {
     background: linear-gradient(135deg, #0066cc, #0052a3);
     color: white;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
 }
-
 button.activo:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
 }
-
 .result {
     display: none;
     margin-top: 20px;
@@ -120,7 +123,6 @@ button.activo:hover {
     font-size: 15px;
     line-height: 1.6;
 }
-
 /* ===== MODALES ===== */
 .modal {
     display: none;
@@ -133,12 +135,10 @@ button.activo:hover {
     z-index: 999;
     animation: fadeIn 0.2s ease;
 }
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 .modal-content {
     position: absolute;
     left: 50%;
@@ -153,12 +153,10 @@ button.activo:hover {
     overflow-y: auto;
     animation: slideUp 0.3s ease;
 }
-
 @keyframes slideUp {
     from { transform: translate(-50%, -40%); opacity: 0; }
     to { transform: translate(-50%, -50%); opacity: 1; }
 }
-
 .modal-header {
     padding: 20px;
     font-size: 22px;
@@ -167,7 +165,6 @@ button.activo:hover {
     color: #0b1f5f;
     background: #f8faff;
 }
-
 .option {
     padding: 20px;
     border-bottom: 1px solid #e5e7eb;
@@ -176,12 +173,10 @@ button.activo:hover {
     transition: all 0.2s ease;
     color: #1a1a2e;
 }
-
 .option:hover {
     background: #f0f6ff;
     padding-left: 24px;
 }
-
 .option.selected {
     background: #eef5ff;
     color: #0066cc;
