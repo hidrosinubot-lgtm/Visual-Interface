@@ -78,3 +78,17 @@
     border-radius: 999px;
     animation: progressBar 4s linear forwards;
 }
+
+/* Agregar al final del archivo */
+.splash-screen.fade-out {
+    animation: fadeOut 0.6s ease forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
