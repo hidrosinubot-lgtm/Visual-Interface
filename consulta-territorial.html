@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulta Territorial</title>
+<link rel="stylesheet" href="shared/variables.css">
+<link rel="stylesheet" href="shared/base.css">
+<link rel="stylesheet" href="pages/consulta-territorial.css">
+</head>
+<body>
+
+<div class="phone">
+
+    <div class="icon-wrap">
+        <img src="assets/images/logo.png" alt="Logo Hidro Sinú" class="icon-logo">
+    </div>
+
+    <h1>Consulta Territorial</h1>
+
+    <p>
+        Seleccione el departamento y municipio para realizar la consulta.
+    </p>
+
+    <label>Departamento</label>
+    <div id="departamentoSelector" class="selector">
+        Seleccione un departamento
+    </div>
+
+    <label>Municipio</label>
+    <div id="municipioSelector" class="selector">
+        Seleccione un municipio
+    </div>
+
+    <button id="btnIngresar" onclick="consultar()">
+        Ingresar
+    </button>
+
+    <div id="resultado" class="result"></div>
+
+</div>
+
+<!-- MODAL DEPARTAMENTOS -->
+<div id="modalDepartamentos" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">Seleccione un departamento</div>
+        <div id="listaDepartamentos"></div>
+    </div>
+</div>
+
+<!-- MODAL MUNICIPIOS -->
+<div id="modalMunicipios" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">Seleccione un municipio</div>
+        <div id="listaMunicipios"></div>
+    </div>
+</div>
+
+<script src="pages/consulta-territorial.js"></script>
+</body>
+</html>
