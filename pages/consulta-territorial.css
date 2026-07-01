@@ -29,22 +29,16 @@ body {
 }
 
 .icon-wrap {
-    width: 130px;
-    height: 130px;
+    width: 100%;
     margin: 10px auto 20px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #e8f0fe, #d4e4ff);
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    box-shadow: 0 8px 25px rgba(0, 102, 204, 0.15);
 }
 
-/* Tu logo dentro del círculo */
 .icon-logo {
-    width: 90px;
-    height: 90px;
+    width: 160px;
+    height: 160px;
     object-fit: contain;
 }
 
