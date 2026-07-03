@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    padding: 30px;
+    margin: 0;
+}
+
+/* ===========================
+   TARJETA PRINCIPAL CONSULTA
+=========================== */
+
+.consulta-card {
+    background: linear-gradient(135deg, #0066cc, #0048b3);
+    border-radius: 28px;
+    padding: 35px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 280px;
+    box-shadow: 0 15px 30px rgba(0, 102, 204, .20);
+}
+
+.consulta-info {
+    width: 50%;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, .15);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.consulta-info h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.consulta-info p {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-consulta {
+    background: white;
+    color: #0066cc;
+    border: none;
+    border-radius: 18px;
+    padding: 18px 35px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===========================
+   ESPACIO IMAGEN PRINCIPAL
+=========================== */
+
+.consulta-imagen {
+    width: 40%;
+    height: 220px;
+    border: 2px dashed rgba(255, 255, 255, .4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+/* ===========================
+   TARJETAS INFERIORES
+=========================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    border-radius: 28px;
+    padding: 25px;
+    min-height: 320px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:nth-child(1) {
+    background: #f3fff8;
+}
+
+.card:nth-child(2) {
+    background: #fffaf3;
+}
+
+.card:nth-child(3) {
+    background: #faf7ff;
+}
+
+.logo-container {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: white;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #d6d6d6;
+}
+
+.logo-placeholder {
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+}
+
+.card h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #172554;
+}
+
+.card p {
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.arrow {
+    margin-top: auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    font-size: 24px;
+    color: #0066cc;
+}
