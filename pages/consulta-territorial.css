@@ -51,23 +51,28 @@ body {
 /* ============================================
    LOGO / IMAGEN - RESPONSIVO PARA MÓVIL
    ============================================ */
+/* ============================================
+   LOGO / IMAGEN - CON TAMAÑO MÍNIMO GARANTIZADO
+   ============================================ */
 .icon-wrap {
     width: 100%;
     margin: 5px auto 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
 
-/* Logo responsivo - se adapta al ancho de la pantalla */
+/* Logo responsivo con tamaño mínimo */
 .icon-logo {
-    width: 80%;           /* ← 80% del contenedor */
-    max-width: 330px;     /* ← Tamaño máximo en tablets/desktop */
-    height: auto;         /* ← Mantiene proporción */
-    aspect-ratio: 1/1;    /* ← Mantiene forma cuadrada */
+    width: min(85%, 330px);    /* ← El menor entre 85% y 330px */
+    min-width: 200px;          /* ← NUEVO: TAMAÑO MÍNIMO ABSOLUTO */
+    height: auto;
+    aspect-ratio: 1/1;
     object-fit: contain;
+    display: block;
 }
-
 /* Alternativa: si usas un contenedor específico para consulta-territorial */
 .consulta-territorial {
     width: 100%;
