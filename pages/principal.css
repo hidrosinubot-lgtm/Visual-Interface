@@ -1,94 +1,89 @@
 body {
     font-family: Arial, sans-serif;
     background: #f7f9fc;
-    padding: 30px;
     margin: 0;
-    animation: fadeInPrincipal 0.7s ease forwards;
+    animation: fadeInPrincipal 0.5s ease forwards;
 }
 
 @keyframes fadeInPrincipal {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.principal-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px;
 }
 
 /* ===========================
-   TARJETA PRINCIPAL CONSULTA
-   (imagen de fondo completa)
+   TARJETA PRINCIPAL (HERO)
 =========================== */
 
 .consulta-card {
-    background-image: url('../assets/images/consulta-hero.png');
+    background-image:
+        linear-gradient(160deg, rgba(0, 82, 204, 0.55), rgba(0, 40, 130, 0.75)),
+        url('../assets/images/consulta-hero.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 28px;
-    padding: 40px;
+    border-radius: 24px;
+    padding: 24px;
     color: white;
+    min-height: 300px;
     display: flex;
     align-items: center;
-    min-height: 320px;
-    box-shadow: 0 15px 30px rgba(0, 102, 204, .20);
-    position: relative;
-}
-
-/* OVERLAY OSCURO PARA LEGIBILIDAD */
-.consulta-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 28px;
-    z-index: 1;
+    box-shadow: 0 15px 30px rgba(0, 102, 204, .25);
 }
 
 .consulta-info {
     width: 100%;
-    position: relative;
-    z-index: 2;
 }
 
 .badge {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 6px 14px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, .15);
-    font-size: 14px;
-    margin-bottom: 20px;
+    background: rgba(255, 255, 255, .18);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
 .consulta-info h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    font-weight: 800;
+    margin: 0 0 12px;
 }
 
 .consulta-info p {
-    font-size: 24px;
+    font-size: 15px;
     line-height: 1.5;
-    margin-bottom: 25px;
-    max-width: 600px;
+    margin: 0 0 20px;
+    color: rgba(255, 255, 255, 0.92);
 }
 
 .btn-consulta {
     background: white;
     color: #0066cc;
     border: none;
-    border-radius: 18px;
-    padding: 18px 35px;
-    font-size: 20px;
-    font-weight: bold;
+    border-radius: 16px;
+    padding: 15px 26px;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
 }
 
-.btn-consulta:hover {
-    transform: scale(1.05);
+.btn-consulta:active {
+    transform: scale(0.97);
+}
+
+.btn-arrow {
+    font-size: 18px;
 }
 
 /* ===========================
@@ -96,75 +91,138 @@ body {
 =========================== */
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
 }
 
 .card {
-    border-radius: 28px;
-    padding: 25px;
-    min-height: 320px;
-    background: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
+    border-radius: 20px;
+    padding: 16px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 14px;
 }
 
-.card:nth-child(1) {
-    background: #f3fff8;
+.card-verde {
+    background: #eafbf1;
 }
 
-.card:nth-child(2) {
-    background: #fffaf3;
+.card-naranja {
+    background: #fdf3e7;
 }
 
-.card:nth-child(3) {
-    background: #faf7ff;
+.card-morado {
+    background: #f4f0fb;
 }
 
 .logo-container {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
     border-radius: 50%;
     background: white;
-    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .logo-container img {
-    width: 58px;
-    height: 58px;
-    object-fit: cover;
-    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
 }
 
-.card h3 {
-    font-size: 32px;
-    margin-bottom: 15px;
+.card-text {
+    flex: 1;
+}
+
+.card-text h3 {
+    font-size: 17px;
+    font-weight: 700;
     color: #172554;
+    margin: 0 0 4px;
+    line-height: 1.25;
 }
 
-.card p {
-    font-size: 18px;
-    color: #4b5563;
-    line-height: 1.6;
+.card-text p {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .arrow {
-    margin-top: auto;
-    width: 60px;
-    height: 60px;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
     border-radius: 50%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: flex-end;
-    font-size: 24px;
+    font-size: 16px;
     color: #0066cc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* ===========================
+   ESCALADO EN PANTALLAS GRANDES
+=========================== */
+@media (min-width: 700px) {
+
+    .principal-wrap {
+        max-width: 900px;
+        padding: 30px;
+    }
+
+    .consulta-card {
+        padding: 40px;
+        min-height: 340px;
+    }
+
+    .consulta-info {
+        max-width: 55%;
+    }
+
+    .consulta-info h2 {
+        font-size: 48px;
+    }
+
+    .consulta-info p {
+        font-size: 20px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 260px;
+        padding: 25px;
+    }
+
+    .logo-container {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        margin-bottom: 20px;
+    }
+
+    .logo-container img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .arrow {
+        margin-top: auto;
+        align-self: flex-end;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
 }
