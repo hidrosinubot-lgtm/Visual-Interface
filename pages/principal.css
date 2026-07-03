@@ -20,7 +20,10 @@ body {
 =========================== */
 
 .consulta-card {
-    background: linear-gradient(135deg, #0066cc, #0048b3);
+    background-image: url('../assets/images/consulta-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 28px;
     padding: 35px;
     color: white;
@@ -29,10 +32,26 @@ body {
     align-items: center;
     min-height: 280px;
     box-shadow: 0 15px 30px rgba(0, 102, 204, .20);
+    position: relative;
+}
+
+/* OVERLAY OSCURO PARA LEGIBILIDAD */
+.consulta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 28px;
+    z-index: 1;
 }
 
 .consulta-info {
     width: 50%;
+    position: relative;
+    z-index: 2;
 }
 
 .badge {
@@ -64,6 +83,11 @@ body {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-consulta:hover {
+    transform: scale(1.05);
 }
 
 /* ===========================
