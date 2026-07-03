@@ -109,10 +109,16 @@ modalMunicipios.addEventListener("click", (e) => {
     }
 });
 
-// ===== CONSULTAR =====
+// ===== CONSULTAR (con transición hacia principal.html) =====
 function consultar() {
     if (!departamentoSeleccionado || !municipioSeleccionado) {
         return;
     }
-    window.location.href = `principal.html?departamento=${encodeURIComponent(departamentoSeleccionado)}&municipio=${encodeURIComponent(municipioSeleccionado)}`;
+
+    const phone = document.querySelector('.phone');
+    phone.classList.add('fade-out');
+
+    setTimeout(() => {
+        window.location.href = `principal.html?departamento=${encodeURIComponent(departamentoSeleccionado)}&municipio=${encodeURIComponent(municipioSeleccionado)}`;
+    }, 300);
 }
