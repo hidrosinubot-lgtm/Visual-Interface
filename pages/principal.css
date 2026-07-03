@@ -73,14 +73,10 @@ body {
 .consulta-imagen {
     width: 40%;
     height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 20px;
-    text-align: center;
-    color: white;
-    font-size: 18px;
-    overflow: hidden;
+    background-image: url('../assets/images/consulta-hero.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .consulta-imagen img {
