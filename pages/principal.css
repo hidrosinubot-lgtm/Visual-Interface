@@ -3,6 +3,16 @@ body {
     background: #f7f9fc;
     padding: 30px;
     margin: 0;
+    animation: fadeInPrincipal 0.7s ease forwards;
+}
+
+@keyframes fadeInPrincipal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* ===========================
@@ -63,7 +73,6 @@ body {
 .consulta-imagen {
     width: 40%;
     height: 220px;
-    border: 2px dashed rgba(255, 255, 255, .4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,6 +80,13 @@ body {
     text-align: center;
     color: white;
     font-size: 18px;
+    overflow: hidden;
+}
+
+.consulta-imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 /* ===========================
@@ -115,13 +131,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed #d6d6d6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-.logo-placeholder {
-    font-size: 12px;
-    text-align: center;
-    color: #999;
+.logo-container img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 .card h3 {
