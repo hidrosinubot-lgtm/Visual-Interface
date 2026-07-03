@@ -1,167 +1,210 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f7f9fc;
-    padding: 30px;
+    background: #f4f7fc;
+    padding: 20px;
     margin: 0;
-    animation: fadeInPrincipal 0.3s ease forwards;
 }
 
-@keyframes fadeInPrincipal {
+.phone {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 0;
+    animation: fadeInPage 0.6s ease forwards;
+}
+
+@keyframes fadeInPage {
     from {
         opacity: 0;
+        transform: translateY(10px);
     }
     to {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* ===========================
-   TARJETA PRINCIPAL CONSULTA
-=========================== */
+/* Transición de salida hacia Principal */
+.phone.fade-out {
+    animation: fadeOutPage 0.4s ease forwards;
+}
 
-.consulta-card {
-    background: linear-gradient(135deg, #0066cc, #0048b3);
-    border-radius: 28px;
-    padding: 35px;
-    color: white;
+@keyframes fadeOutPage {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.icon-wrap {
+    width: 100%;
+    margin: 10px auto 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    min-height: 280px;
-    box-shadow: 0 15px 30px rgba(0, 102, 204, .20);
+    justify-content: center;
 }
 
-.consulta-info {
-    width: 50%;
+.icon-logo {
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
 }
 
-.badge {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, .15);
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.consulta-info h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.consulta-info p {
+h1 {
+    text-align: center;
+    color: #0b1f5f;
+    margin: 0;
     font-size: 24px;
-    line-height: 1.5;
-    margin-bottom: 25px;
+    font-weight: 700;
 }
 
-.btn-consulta {
+p {
+    text-align: center;
+    color: #6b7280;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #0b1f5f;
+    font-size: 14px;
+}
+
+.selector {
+    width: 100%;
+    padding: 16px 44px 16px 16px;
+    border: 1px solid #d8deea;
+    border-radius: 16px;
+    font-size: 16px;
     background: white;
-    color: #0066cc;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.selector:hover {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+}
+
+.selector::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #6b7280;
+    border-bottom: 2px solid #6b7280;
+    transform: translateY(-65%) rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.selector.abierto::after {
+    transform: translateY(-35%) rotate(225deg);
+}
+
+button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
     border: none;
-    border-radius: 18px;
-    padding: 18px 35px;
+    border-radius: 16px;
+    background: #cfd6df;
+    color: #8b97a7;
     font-size: 20px;
     font-weight: bold;
-    cursor: pointer;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
 }
 
-/* ===========================
-   ESPACIO IMAGEN PRINCIPAL
-=========================== */
-
-.consulta-imagen {
-    width: 40%;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 20px;
-    text-align: center;
+button.activo {
+    background: linear-gradient(135deg, #0066cc, #0052a3);
     color: white;
-    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+button.activo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+}
+
+/* ===== MODALES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .45);
+    z-index: 999;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 420px;
+    background: white;
+    border-radius: 20px;
     overflow: hidden;
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease;
 }
 
-.consulta-imagen img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+@keyframes slideUp {
+    from { transform: translate(-50%, -40%); opacity: 0; }
+    to { transform: translate(-50%, -50%); opacity: 1; }
 }
 
-/* ===========================
-   TARJETAS INFERIORES
-=========================== */
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
+.modal-header {
+    padding: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px solid #e5e7eb;
+    color: #0b1f5f;
+    background: #f8faff;
 }
 
-.card {
-    border-radius: 28px;
-    padding: 25px;
-    min-height: 320px;
-    background: white;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .05);
-    display: flex;
-    flex-direction: column;
-}
-
-.card:nth-child(1) {
-    background: #f3fff8;
-}
-
-.card:nth-child(2) {
-    background: #fffaf3;
-}
-
-.card:nth-child(3) {
-    background: #faf7ff;
-}
-
-.logo-container {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: white;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.logo-container img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
-}
-
-.card h3 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #172554;
-}
-
-.card p {
+.option {
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
     font-size: 18px;
-    color: #4b5563;
-    line-height: 1.6;
+    transition: all 0.2s ease;
+    color: #1a1a2e;
 }
 
-.arrow {
-    margin-top: auto;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: flex-end;
-    font-size: 24px;
+.option:hover {
+    background: #f0f6ff;
+    padding-left: 24px;
+}
+
+.option.selected {
+    background: #eef5ff;
     color: #0066cc;
+    font-weight: bold;
+    border-left: 4px solid #0066cc;
 }
