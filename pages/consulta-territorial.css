@@ -1,19 +1,26 @@
+/* ============================================
+   CONFIGURACIÓN BASE - MOBILE FIRST
+   ============================================ */
 body {
     font-family: Arial, sans-serif;
     background: #f4f7fc;
-    padding: 20px;
+    padding: 12px;  /* Reducido para móvil */
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Contenedor principal optimizado para móvil */
 .phone {
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
     background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 20px 0;
+    padding: 16px 0;  /* Padding reducido para móvil */
     animation: fadeInPage 0.6s ease forwards;
+    /* Eliminamos el scale y zoom que distorsionaban */
 }
 
 @keyframes fadeInPage {
@@ -27,7 +34,7 @@ body {
     }
 }
 
-/* Transición de salida hacia Principal */
+/* Transición de salida */
 .phone.fade-out {
     animation: fadeOutPage 0.4s ease forwards;
 }
@@ -41,56 +48,78 @@ body {
     }
 }
 
+/* ============================================
+   LOGO / IMAGEN - AUMENTADO 10%
+   ============================================ */
 .icon-wrap {
     width: 100%;
-    margin: 15px auto 8px;
+    margin: 10px auto 8px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Aumentamos el tamaño del logo en 10% */
 .icon-logo {
-    width: 300px;
-    height: 300px;
+    width: 330px;      /* 300px + 10% = 330px */
+    height: 330px;     /* 300px + 10% = 330px */
     object-fit: contain;
 }
 
+/* Alternativa: si usas un contenedor específico para consulta-territorial */
+.consulta-territorial {
+    width: 100%;
+    max-width: 528px;  /* 480px + 10% = 528px */
+    margin: 0 auto;
+    padding: 17.6px;   /* 16px + 10% = 17.6px */
+}
+
+/* ============================================
+   TIPOGRAFÍA OPTIMIZADA PARA MÓVIL
+   ============================================ */
 h1 {
     text-align: center;
     color: #0b1f5f;
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;   /* Tamaño adecuado para móvil */
     font-weight: 700;
+    line-height: 1.2;
 }
 
 p {
     text-align: center;
     color: #6b7280;
     line-height: 1.5;
-    font-size: 14px;
+    font-size: 14px;   /* Mínimo recomendado para móvil */
     margin-top: 8px;
+    padding: 0 8px;
 }
 
 label {
     display: block;
-    margin-top: 24px;
+    margin-top: 20px;
     margin-bottom: 8px;
     font-weight: 700;
     color: #0b1f5f;
     font-size: 14px;
 }
 
+/* ============================================
+   SELECTOR OPTIMIZADO PARA TÁCTIL
+   ============================================ */
 .selector {
     width: 100%;
     padding: 16px 44px 16px 16px;
     border: 1px solid #d8deea;
     border-radius: 16px;
-    font-size: 16px;
+    font-size: 16px;   /* Mínimo para evitar zoom en iOS */
     background: white;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
+    -webkit-appearance: none;  /* Elimina estilos nativos en iOS */
+    appearance: none;
 }
 
 .selector:hover {
@@ -98,6 +127,7 @@ label {
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
+/* Flecha personalizada del selector */
 .selector::after {
     content: "";
     position: absolute;
@@ -109,24 +139,29 @@ label {
     border-bottom: 2px solid #6b7280;
     transform: translateY(-65%) rotate(45deg);
     transition: transform 0.2s ease;
+    pointer-events: none;  /* Evita que interfiera con el click */
 }
 
 .selector.abierto::after {
     transform: translateY(-35%) rotate(225deg);
 }
 
+/* ============================================
+   BOTÓN OPTIMIZADO PARA MÓVIL
+   ============================================ */
 button {
     width: 100%;
-    margin-top: 30px;
-    padding: 18px;
+    margin-top: 24px;
+    padding: 18px;      /* Área táctil grande */
     border: none;
     border-radius: 16px;
     background: #cfd6df;
     color: #8b97a7;
-    font-size: 20px;
+    font-size: 18px;    /* Legible en móvil */
     font-weight: bold;
     cursor: not-allowed;
     transition: all 0.3s ease;
+    -webkit-tap-highlight-color: transparent;  /* Elimina destello en iOS */
 }
 
 button.activo {
@@ -141,7 +176,13 @@ button.activo:hover {
     box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
 }
 
-/* ===== MODALES ===== */
+button.activo:active {
+    transform: scale(0.97);  /* Feedback táctil */
+}
+
+/* ============================================
+   MODALES OPTIMIZADOS PARA MÓVIL
+   ============================================ */
 .modal {
     display: none;
     position: fixed;
@@ -152,6 +193,7 @@ button.activo:hover {
     background: rgba(0, 0, 0, .45);
     z-index: 999;
     animation: fadeIn 0.2s ease;
+    padding: 16px;  /* Espacio en los bordes */
 }
 
 @keyframes fadeIn {
@@ -164,7 +206,7 @@ button.activo:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
+    width: 95%;         /* Más ancho en móvil */
     max-width: 420px;
     background: white;
     border-radius: 20px;
@@ -172,6 +214,7 @@ button.activo:hover {
     max-height: 80vh;
     overflow-y: auto;
     animation: slideUp 0.3s ease;
+    -webkit-overflow-scrolling: touch;  /* Scroll suave en iOS */
 }
 
 @keyframes slideUp {
@@ -180,8 +223,8 @@ button.activo:hover {
 }
 
 .modal-header {
-    padding: 20px;
-    font-size: 22px;
+    padding: 18px 20px;
+    font-size: 20px;    /* Ajustado para móvil */
     font-weight: bold;
     border-bottom: 1px solid #e5e7eb;
     color: #0b1f5f;
@@ -189,12 +232,13 @@ button.activo:hover {
 }
 
 .option {
-    padding: 20px;
+    padding: 16px 20px;  /* Área táctil grande */
     border-bottom: 1px solid #e5e7eb;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;    /* Legible en móvil */
     transition: all 0.2s ease;
     color: #1a1a2e;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .option:hover {
@@ -209,12 +253,59 @@ button.activo:hover {
     border-left: 4px solid #0066cc;
 }
 
-/* ===== CONTROL DE ESCALA GENERAL ===== */
-.phone {
-    transform: scale(0.90); 
-    transform-origin: top center;
+/* ============================================
+   MEJORAS PARA PANTALLAS GRANDES (TABLET/DESKTOP)
+   ============================================ */
+@media (min-width: 768px) {
+    body {
+        padding: 30px;
+    }
+
+    .phone {
+        max-width: 600px;  /* Se expande un poco en tablet */
+        padding: 30px 0;
+    }
+
+    /* Aumentamos aún más el logo en pantallas grandes */
+    .icon-logo {
+        width: 400px;
+        height: 400px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .selector {
+        font-size: 18px;
+        padding: 18px 48px 18px 18px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 20px;
+    }
 }
 
-.phone {
-    zoom: 0.90; 
+@media (min-width: 1024px) {
+    .phone {
+        max-width: 700px;
+    }
+
+    .icon-logo {
+        width: 450px;
+        height: 450px;
+    }
 }
+
+/* ============================================
+   UTILIDADES - ELIMINAMOS LOS SCALE Y ZOOM
+   ============================================ */
+/* Eliminadas las reglas que causaban distorsión:
+   - transform: scale(0.90)
+   - zoom: 0.90
+   Ahora el contenido se adapta naturalmente */
