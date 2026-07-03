@@ -43,7 +43,7 @@ body {
 
 .icon-wrap {
     width: 100%;
-    margin: 10px auto 20px;
+    margin: 15px auto 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,4 +207,14 @@ button.activo:hover {
     color: #0066cc;
     font-weight: bold;
     border-left: 4px solid #0066cc;
+}
+
+/* ===== CONTROL DE ESCALA GENERAL ===== */
+.phone {
+    transform: scale(0.90); 
+    transform-origin: top center;
+}
+
+.phone {
+    zoom: 0.90; 
 }
