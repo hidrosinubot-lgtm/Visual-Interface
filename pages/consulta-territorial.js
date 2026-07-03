@@ -114,6 +114,5 @@ function consultar() {
     if (!departamentoSeleccionado || !municipioSeleccionado) {
         return;
     }
-    
-    console.log("Consulta guardada:", departamentoSeleccionado, "-", municipioSeleccionado);
+    window.location.href = `principal.html?departamento=${encodeURIComponent(departamentoSeleccionado)}&municipio=${encodeURIComponent(municipioSeleccionado)}`;
 }
