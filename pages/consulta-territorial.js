@@ -118,7 +118,7 @@ function consultar() {
     const resultado = document.getElementById("resultado");
     resultado.style.display = "block";
     resultado.innerHTML =
-        "<b>Consulta seleccionada:</b><br>" +
+        "<b>📍 Consulta seleccionada:</b><br>" +
         departamentoSeleccionado +
         " - " +
         municipioSeleccionado;
