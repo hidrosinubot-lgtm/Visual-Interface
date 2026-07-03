@@ -56,7 +56,7 @@ body {
    ============================================ */
 .icon-wrap {
     width: 100%;
-    margin: 5px auto 8px;
+    margin: 0px auto 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,8 +66,8 @@ body {
 
 /* Logo responsivo con tamaño mínimo */
 .icon-logo {
-    width: min(95%, 450px);    /* ← El menor entre 85% y 330px */
-    min-width: 280px;          /* ← NUEVO: TAMAÑO MÍNIMO ABSOLUTO */
+    width: min(120%, 500px);    /* ← El menor entre 85% y 330px */
+    min-width: 320px;          /* ← NUEVO: TAMAÑO MÍNIMO ABSOLUTO */
     height: auto;
     aspect-ratio: 1/1;
     object-fit: contain;
