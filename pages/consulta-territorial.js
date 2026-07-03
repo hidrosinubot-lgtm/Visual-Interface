@@ -114,12 +114,6 @@ function consultar() {
     if (!departamentoSeleccionado || !municipioSeleccionado) {
         return;
     }
-
-    const resultado = document.getElementById("resultado");
-    resultado.style.display = "block";
-    resultado.innerHTML =
-        "<b>📍 Consulta seleccionada:</b><br>" +
-        departamentoSeleccionado +
-        " - " +
-        municipioSeleccionado;
+    
+    console.log("Consulta guardada:", departamentoSeleccionado, "-", municipioSeleccionado);
 }
