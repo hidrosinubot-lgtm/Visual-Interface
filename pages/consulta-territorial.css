@@ -49,20 +49,22 @@ body {
 }
 
 /* ============================================
-   LOGO / IMAGEN - AUMENTADO 10%
+   LOGO / IMAGEN - RESPONSIVO PARA MÓVIL
    ============================================ */
 .icon-wrap {
     width: 100%;
-    margin: 5px auto 8px;  /* ← Nuevo: 5px (la mitad de 10px) */
+    margin: 5px auto 8px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Aumentamos el tamaño del logo en 10% */
+/* Logo responsivo - se adapta al ancho de la pantalla */
 .icon-logo {
-    width: 330px;      /* 300px + 10% = 330px */
-    height: 330px;     /* 300px + 10% = 330px */
+    width: 80%;           /* ← 80% del contenedor */
+    max-width: 330px;     /* ← Tamaño máximo en tablets/desktop */
+    height: auto;         /* ← Mantiene proporción */
+    aspect-ratio: 1/1;    /* ← Mantiene forma cuadrada */
     object-fit: contain;
 }
 
@@ -263,18 +265,21 @@ button.activo:active {
     }
 
     .phone {
-        max-width: 600px;  /* Se expande un poco en tablet */
+        max-width: 600px;
         padding: 30px 0;
     }
 
-    /* Aumentamos aún más el logo en pantallas grandes */
+    /* Logo responsivo en tablet */
     .icon-logo {
-        width: 400px;
-        height: 400px;
+        width: 80%;          /* ← Cambiado: 400px → 80% */
+        max-width: 400px;    /* ← NUEVO: límite máximo */
+        height: auto;        /* ← Cambiado: 400px → auto */
+        aspect-ratio: 1/1;   /* ← NUEVO: mantiene proporción */
     }
 
     h1 {
         font-size: 28px;
+        margin-top: 12px;    /* ← NUEVO: ajuste de espaciado */
     }
 
     p {
@@ -297,16 +302,11 @@ button.activo:active {
         max-width: 700px;
     }
 
+    /* Logo responsivo en desktop */
     .icon-logo {
-        width: 450px;
-        height: 450px;
+        width: 70%;          /* ← Cambiado: 450px → 70% */
+        max-width: 450px;    /* ← NUEVO: límite máximo */
+        height: auto;        /* ← Cambiado: 450px → auto */
+        aspect-ratio: 1/1;   /* ← NUEVO: mantiene proporción */
     }
 }
-
-/* ============================================
-   UTILIDADES - ELIMINAMOS LOS SCALE Y ZOOM
-   ============================================ */
-/* Eliminadas las reglas que causaban distorsión:
-   - transform: scale(0.90)
-   - zoom: 0.90
-   Ahora el contenido se adapta naturalmente */
