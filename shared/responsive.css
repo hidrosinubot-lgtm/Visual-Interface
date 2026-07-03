@@ -28,52 +28,91 @@
         padding: 14px;
     }
 
-    /* ===== Principal ===== */
+/* ===== Principal ===== */
     .consulta-card {
+        background-image: none;
+        background-color: #0066cc;
         flex-direction: column;
-        text-align: center;
-        padding: 20px;
+        align-items: flex-start;
+        text-align: left;
+        padding: 24px;
         min-height: auto;
+        border-radius: 24px;
+    }
+
+    .consulta-card::before {
+        display: none;
     }
 
     .consulta-info {
         width: 100%;
     }
 
+    .badge {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
     .consulta-info h2 {
-        font-size: 32px;
+        font-size: 30px;
+        margin-bottom: 12px;
     }
 
     .consulta-info p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .btn-consulta {
+        padding: 14px 28px;
         font-size: 16px;
     }
 
-    .consulta-imagen {
-        width: 100%;
-        height: 160px;
-        margin-top: 20px;
-    }
-
     .cards {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
     }
 
-    .card h3 {
-        font-size: 22px;
-    }
-
-    .card p {
-        font-size: 15px;
+    .card {
+        flex-direction: row;
+        align-items: center;
+        min-height: auto;
+        padding: 16px;
+        border-radius: 20px;
+        gap: 14px;
     }
 
     .logo-container {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        flex-shrink: 0;
+        margin-bottom: 0;
     }
 
     .logo-container img {
-        width: 42px;
-        height: 42px;
+        width: 36px;
+        height: 36px;
     }
 
-}
+    .card-text {
+        flex: 1;
+    }
+
+    .card h3 {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
+    .card p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-top: 0;
+        flex-shrink: 0;
+    }
