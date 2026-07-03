@@ -111,18 +111,7 @@ button.activo {
 button.activo:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
-}
-.result {
-    display: none;
-    margin-top: 20px;
-    padding: 18px;
-    background: linear-gradient(135deg, #eef5ff, #e3edff);
-    border-radius: 14px;
-    color: #0b1f5f;
-    border-left: 4px solid #0066cc;
-    font-size: 15px;
-    line-height: 1.6;
-}
+
 /* ===== MODALES ===== */
 .modal {
     display: none;
