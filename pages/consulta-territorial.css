@@ -40,8 +40,8 @@ body {
 
 .icon-logo {
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 310px;
+    height: 310px;
     object-fit: fill;  /* ← CAMBIA esto */
     margin: 10px auto 20px;
     border: 3px solid red; /* Para que veas el cambio */
