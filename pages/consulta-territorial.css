@@ -40,8 +40,8 @@ body {
 /* Logo: 86px = tamaño de referencia (95px) menos 9% */
 .icon-logo {
     display: block;
-    width: 86px;
-    height: 86px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
     margin: 10px auto 20px;
 }
