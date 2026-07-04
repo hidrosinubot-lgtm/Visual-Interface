@@ -38,16 +38,17 @@ body {
     to { opacity: 0; }
 }
 
-/* Logo: 90x90px, centrado */
 .icon-logo {
     display: block;
-    width: 250px;
-    height: 250px;
+    width: 250px;      /* Cambia este valor al tamaño que quieras */
+    height: 250px;     /* Cambia este valor al tamaño que quieras */
     object-fit: contain;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin: 10px auto 20px;
+    /* Fuerza el redimensionamiento */
+    max-width: 100%;
+    flex-shrink: 0;
+    /* Para depurar: esto te mostrará si el CSS se aplica */
+    border: 3px solid red;
 }
 
 h1 {
