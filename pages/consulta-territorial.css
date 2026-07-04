@@ -41,8 +41,8 @@ body {
 /* Logo: 90x90px, centrado */
 .icon-logo {
     display: block;
-    width: 90px;
-    height: 90px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
     margin-left: auto;
     margin-right: auto;
