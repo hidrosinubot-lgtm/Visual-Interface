@@ -44,7 +44,7 @@ body {
     height: 250px !important;
     object-fit: cover;  /* ← RECOMENDADO */
     margin: 10px auto 20px;
-    border: none;
+    border: none !important;
 }
 
 h1 {
