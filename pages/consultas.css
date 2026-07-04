@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    animation: fadeInConsultas 0.5s ease forwards;
+}
+
+@keyframes fadeInConsultas {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.principal-wrap {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* ===========================
+   ENCABEZADO (HERO)
+=========================== */
+
+.header-card {
+    background-image:
+        linear-gradient(160deg, rgba(0, 40, 130, 0.55), rgba(0, 20, 70, 0.75)),
+        url('../assets/images/consultas-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 24px;
+    padding-bottom: 60px;
+    color: white;
+    position: relative;
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.header-card h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0 0 10px;
+}
+
+.header-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 80%;
+}
+
+/* ===========================
+   TARJETAS DE PRONÓSTICO
+=========================== */
+
+.forecast-card {
+    border-radius: 22px;
+    padding: 20px;
+    margin-top: -40px;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.fc-amarillo {
+    background: linear-gradient(135deg, #fff6e0, #ffedc2);
+}
+
+.fc-azul {
+    background: linear-gradient(135deg, #eaf2ff, #dce9ff);
+    margin-top: 0;
+}
+
+.fc-morado {
+    background: linear-gradient(135deg, #f2edfb, #e9e0f9);
+    margin-top: 0;
+}
+
+.fc-top {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.fc-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fc-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.fc-text h3 {
+    font-size: 19px;
+    font-weight: 700;
+    color: #172554;
+    margin: 0 0 6px;
+}
+
+.fc-text p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.fc-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.fc-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fc-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #374151;
+}
+
+.fc-tag img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.btn-consultar {
+    background: linear-gradient(135deg, #0066cc, #0048b3);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    transition: transform 0.2s ease;
+}
+
+.btn-consultar:active {
+    transform: scale(0.97);
+}
+
+/* ===========================
+   ESCALADO EN PANTALLAS GRANDES
+=========================== */
+@media (min-width: 700px) {
+
+    .principal-wrap {
+        max-width: 900px;
+        padding: 30px;
+    }
+
+    .header-card {
+        padding: 40px;
+        padding-bottom: 80px;
+    }
+
+    .header-card h2 {
+        font-size: 42px;
+    }
+
+    .header-card p {
+        font-size: 18px;
+        max-width: 60%;
+    }
+
+    .forecast-card {
+        margin-top: -50px;
+    }
+
+    .fc-azul, .fc-morado {
+        margin-top: 20px;
+    }
+
+    .fc-bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .fc-tags {
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .btn-consultar {
+        width: auto;
+        padding: 14px 28px;
+    }
+}
