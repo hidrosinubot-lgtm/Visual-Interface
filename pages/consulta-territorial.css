@@ -42,7 +42,7 @@ body {
     display: block;
     width: 310px;        /* ← Aumentado a 310px */
     height: 310px;       /* ← Aumentado a 310px */
-    object-fit: fill;
+    object-fit: contain;
     margin: 10px auto 20px;
     border: 3px solid red; /* Quita esto cuando esté bien */
 }
