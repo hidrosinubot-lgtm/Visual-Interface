@@ -1,26 +1,19 @@
-/* ============================================
-   CONFIGURACIÓN BASE - MOBILE FIRST
-   ============================================ */
 body {
     font-family: Arial, sans-serif;
     background: #f4f7fc;
-    padding: 12px;  /* Reducido para móvil */
+    padding: 20px;
     margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Contenedor principal optimizado para móvil */
 .phone {
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
     background: transparent;
-    padding: 16px 0;  /* Padding reducido para móvil */
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 0;
     animation: fadeInPage 0.6s ease forwards;
-    /* Eliminamos el scale y zoom que distorsionaban */
 }
 
 @keyframes fadeInPage {
@@ -34,100 +27,68 @@ body {
     }
 }
 
-/* Transición de salida */
+/* Transición de salida hacia Principal */
 .phone.fade-out {
     animation: fadeOutPage 0.4s ease forwards;
 }
 
 @keyframes fadeOutPage {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
 
-/* ============================================
-   LOGO / IMAGEN - RESPONSIVO PARA MÓVIL
-   ============================================ */
-/* ============================================
-   LOGO / IMAGEN - CON TAMAÑO MÍNIMO GARANTIZADO
-   ============================================ */
 .icon-wrap {
     width: 100%;
-    margin: 0px auto 8px;
+    margin: 10px auto 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 15px;
-    box-sizing: border-box;
 }
 
-/* Logo responsivo con tamaño mínimo */
+/* Logo: tamaño relativo al ancho de .phone (contenedor padre),
+   equivalente a un 9% menos que el tamaño de referencia */
 .icon-logo {
-    width: min(120%, 500px);    /* ← El menor entre 85% y 330px */
-    min-width: 320px;          /* ← NUEVO: TAMAÑO MÍNIMO ABSOLUTO */
+    width: 20%;
     height: auto;
-    aspect-ratio: 1/1;
     object-fit: contain;
-    display: block;
-}
-/* Alternativa: si usas un contenedor específico para consulta-territorial */
-.consulta-territorial {
-    width: 100%;
-    max-width: 528px;  /* 480px + 10% = 528px */
-    margin: 0 auto;
-    padding: 17.6px;   /* 16px + 10% = 17.6px */
 }
 
-/* ============================================
-   TIPOGRAFÍA OPTIMIZADA PARA MÓVIL
-   ============================================ */
 h1 {
     text-align: center;
     color: #0b1f5f;
     margin: 0;
-    margin-top: 8px;  /* ← NUEVO: 8px (la mitad de 16px que tenía antes) */
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 1.2;
 }
 
 p {
     text-align: center;
     color: #6b7280;
     line-height: 1.5;
-    font-size: 14px;   /* Mínimo recomendado para móvil */
+    font-size: 14px;
     margin-top: 8px;
-    padding: 0 8px;
 }
 
 label {
     display: block;
-    margin-top: 20px;
+    margin-top: 24px;
     margin-bottom: 8px;
     font-weight: 700;
     color: #0b1f5f;
     font-size: 14px;
 }
 
-/* ============================================
-   SELECTOR OPTIMIZADO PARA TÁCTIL
-   ============================================ */
 .selector {
     width: 100%;
     padding: 16px 44px 16px 16px;
     border: 1px solid #d8deea;
     border-radius: 16px;
-    font-size: 16px;   /* Mínimo para evitar zoom en iOS */
+    font-size: 16px;
     background: white;
     box-sizing: border-box;
     cursor: pointer;
     transition: all 0.2s ease;
     position: relative;
-    -webkit-appearance: none;  /* Elimina estilos nativos en iOS */
-    appearance: none;
 }
 
 .selector:hover {
@@ -135,7 +96,6 @@ label {
     box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
 }
 
-/* Flecha personalizada del selector */
 .selector::after {
     content: "";
     position: absolute;
@@ -147,29 +107,24 @@ label {
     border-bottom: 2px solid #6b7280;
     transform: translateY(-65%) rotate(45deg);
     transition: transform 0.2s ease;
-    pointer-events: none;  /* Evita que interfiera con el click */
 }
 
 .selector.abierto::after {
     transform: translateY(-35%) rotate(225deg);
 }
 
-/* ============================================
-   BOTÓN OPTIMIZADO PARA MÓVIL
-   ============================================ */
 button {
     width: 100%;
-    margin-top: 24px;
-    padding: 18px;      /* Área táctil grande */
+    margin-top: 30px;
+    padding: 18px;
     border: none;
     border-radius: 16px;
     background: #cfd6df;
     color: #8b97a7;
-    font-size: 18px;    /* Legible en móvil */
+    font-size: 20px;
     font-weight: bold;
     cursor: not-allowed;
     transition: all 0.3s ease;
-    -webkit-tap-highlight-color: transparent;  /* Elimina destello en iOS */
 }
 
 button.activo {
@@ -184,13 +139,7 @@ button.activo:hover {
     box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
 }
 
-button.activo:active {
-    transform: scale(0.97);  /* Feedback táctil */
-}
-
-/* ============================================
-   MODALES OPTIMIZADOS PARA MÓVIL
-   ============================================ */
+/* ===== MODALES ===== */
 .modal {
     display: none;
     position: fixed;
@@ -201,7 +150,6 @@ button.activo:active {
     background: rgba(0, 0, 0, .45);
     z-index: 999;
     animation: fadeIn 0.2s ease;
-    padding: 16px;  /* Espacio en los bordes */
 }
 
 @keyframes fadeIn {
@@ -214,7 +162,7 @@ button.activo:active {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 95%;         /* Más ancho en móvil */
+    width: 90%;
     max-width: 420px;
     background: white;
     border-radius: 20px;
@@ -222,7 +170,6 @@ button.activo:active {
     max-height: 80vh;
     overflow-y: auto;
     animation: slideUp 0.3s ease;
-    -webkit-overflow-scrolling: touch;  /* Scroll suave en iOS */
 }
 
 @keyframes slideUp {
@@ -231,8 +178,8 @@ button.activo:active {
 }
 
 .modal-header {
-    padding: 18px 20px;
-    font-size: 20px;    /* Ajustado para móvil */
+    padding: 20px;
+    font-size: 22px;
     font-weight: bold;
     border-bottom: 1px solid #e5e7eb;
     color: #0b1f5f;
@@ -240,13 +187,12 @@ button.activo:active {
 }
 
 .option {
-    padding: 16px 20px;  /* Área táctil grande */
+    padding: 20px;
     border-bottom: 1px solid #e5e7eb;
     cursor: pointer;
-    font-size: 16px;    /* Legible en móvil */
+    font-size: 18px;
     transition: all 0.2s ease;
     color: #1a1a2e;
-    -webkit-tap-highlight-color: transparent;
 }
 
 .option:hover {
@@ -259,59 +205,4 @@ button.activo:active {
     color: #0066cc;
     font-weight: bold;
     border-left: 4px solid #0066cc;
-}
-
-/* ============================================
-   MEJORAS PARA PANTALLAS GRANDES (TABLET/DESKTOP)
-   ============================================ */
-@media (min-width: 768px) {
-    body {
-        padding: 30px;
-    }
-
-    .phone {
-        max-width: 600px;
-        padding: 30px 0;
-    }
-
-    /* Logo responsivo en tablet */
-    .icon-logo {
-        width: 80%;          /* ← Cambiado: 400px → 80% */
-        max-width: 400px;    /* ← NUEVO: límite máximo */
-        height: auto;        /* ← Cambiado: 400px → auto */
-        aspect-ratio: 1/1;   /* ← NUEVO: mantiene proporción */
-    }
-
-    h1 {
-        font-size: 28px;
-        margin-top: 12px;    /* ← NUEVO: ajuste de espaciado */
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .selector {
-        font-size: 18px;
-        padding: 18px 48px 18px 18px;
-    }
-
-    button {
-        font-size: 20px;
-        padding: 20px;
-    }
-}
-
-@media (min-width: 1024px) {
-    .phone {
-        max-width: 700px;
-    }
-
-    /* Logo responsivo en desktop */
-    .icon-logo {
-        width: 70%;          /* ← Cambiado: 450px → 70% */
-        max-width: 450px;    /* ← NUEVO: límite máximo */
-        height: auto;        /* ← Cambiado: 450px → auto */
-        aspect-ratio: 1/1;   /* ← NUEVO: mantiene proporción */
-    }
 }
