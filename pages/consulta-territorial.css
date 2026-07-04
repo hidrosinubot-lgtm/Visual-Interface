@@ -42,12 +42,10 @@ body {
     display: block;
     width: 310px;
     height: 310px;
-    object-fit: cover;
-    object-position: center;
+    object-fit: cover;  /* ← ESTO HACE QUE LLENE TODO */
+    object-position: center;  /* ← Centra la imagen */
     margin: 10px auto 20px;
-    /* Recorta el 20% de cada borde */
-    clip-path: inset(15%);
-    border: 3px solid red;
+    border: 3px solid red;  /* Quítalo cuando esté bien */
 }
 
 h1 {
