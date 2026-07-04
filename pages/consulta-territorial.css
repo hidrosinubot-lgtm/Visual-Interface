@@ -45,9 +45,8 @@ body {
     object-fit: cover;
     object-position: center;
     margin: 10px auto 20px;
-    /* FUERZA BRUTA para llenar */
-    transform: scale(2);
-    clip-path: inset(10%);
+    /* Recorta el 20% de cada borde */
+    clip-path: inset(15%);
     border: 3px solid red;
 }
 
