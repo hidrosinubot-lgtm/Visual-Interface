@@ -42,9 +42,11 @@ body {
     display: block;
     width: 250px !important;
     height: 250px !important;
-    object-fit: cover;  /* ← RECOMENDADO */
+    object-fit: cover;
     margin: 10px auto 20px;
     border: none !important;
+    outline: none !important;   /* ← Agrega esto */
+    box-shadow: none !important; /* ← Agrega esto */
 }
 
 h1 {
