@@ -3,11 +3,11 @@ const params = new URLSearchParams(window.location.search);
 const departamentoActual = params.get('departamento');
 const municipioActual = params.get('municipio');
 
-// Acción del botón "Ir a Consulta" (ajusta el destino cuando definas esa pantalla)
+// Acción del botón "Ir a Consulta" → redirige a la pantalla de consultas
 const btnConsulta = document.querySelector('.btn-consulta');
 if (btnConsulta) {
     btnConsulta.addEventListener('click', () => {
         console.log('Ir a Consulta:', departamentoActual, municipioActual);
-        // window.location.href = "siguiente-pantalla.html";
+        window.location.href = 'consultas.html';
     });
 }
