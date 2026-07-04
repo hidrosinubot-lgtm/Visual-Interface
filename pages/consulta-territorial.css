@@ -37,19 +37,13 @@ body {
     to { opacity: 0; }
 }
 
-.icon-wrap {
-    width: 100%;
-    margin: 10px auto 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Logo: 86px = tamaño de referencia (95px) menos 9% */
 .icon-logo {
+    display: block;
     width: 86px;
     height: 86px;
     object-fit: contain;
+    margin: 10px auto 20px;
 }
 
 h1 {
