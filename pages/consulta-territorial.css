@@ -45,8 +45,9 @@ body {
     object-fit: cover;
     object-position: center;
     margin: 10px auto 20px;
-    /* FORZA que llene TODO */
-    transform: scale(1.5);  /* Ajusta este valor (1.5 = 150%) */
+    /* FUERZA BRUTA para llenar */
+    transform: scale(2);
+    clip-path: inset(10%);
     border: 3px solid red;
 }
 
