@@ -45,11 +45,10 @@ body {
     justify-content: center;
 }
 
-/* Logo: tamaño relativo al ancho de .phone (contenedor padre),
-   equivalente a un 9% menos que el tamaño de referencia */
+/* Logo: 86px = tamaño de referencia (95px) menos 9% */
 .icon-logo {
-    width: 20%;
-    height: auto;
+    width: 86px;
+    height: 86px;
     object-fit: contain;
 }
 
