@@ -21,7 +21,7 @@ body {
 =========================== */
 
 .header-card {
-    background: #0066cc;
+    background: #0066cc !important;
     padding: 24px;
     padding-bottom: 60px;
     color: white;
