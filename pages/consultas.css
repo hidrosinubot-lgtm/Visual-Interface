@@ -92,6 +92,7 @@ body {
 
 .fc-top {
     display: flex;
+    align-items: flex-start;
     gap: 14px;
     margin-bottom: 17px;
 }
