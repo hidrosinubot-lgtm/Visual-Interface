@@ -1,11 +1,10 @@
-/* ===== MODIFICAR ESTO ===== */
 html, body {
-    height: 100%;              /* ← NUEVO: altura completa */
-    min-height: 100vh;         /* ← NUEVO: altura mínima de pantalla */
-    margin: 0;
-    padding: 0;
-    overflow-y: auto;          /* ← NUEVO: permite scroll */
-    overflow-x: hidden;        /* ← NUEVO: sin scroll horizontal */
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-y: scroll !important;    /* ← Fuerza scroll SIEMPRE */
+    overflow-x: hidden !important;
 }
 
 body {
@@ -13,8 +12,9 @@ body {
     background: #f7f9fc;
     margin: 0;
     animation: fadeInConsultas 0.5s ease forwards;
-    min-height: 100vh;         /* ← NUEVO: altura mínima de pantalla */
-    height: auto;              /* ← NUEVO: se adapta al contenido */
+    min-height: 100vh !important;
+    height: auto !important;
+    overflow-y: scroll !important;    /* ← Fuerza scroll en body */
 }
 
 @keyframes fadeInConsultas {
@@ -26,10 +26,11 @@ body {
     max-width: 480px;
     margin: 0 auto;
     padding: 16px;
-    padding-bottom: 40px;      /* ← NUEVO: espacio extra abajo */
-    min-height: 100vh;         /* ← NUEVO: altura mínima de pantalla */
-    height: auto;              /* ← NUEVO: se adapta al contenido */
-    overflow-y: auto;          /* ← NUEVO: permite scroll */
+    padding-bottom: 60px !important;  /* ← Más espacio abajo */
+    min-height: 100vh !important;
+    height: auto !important;
+    overflow-y: scroll !important;    /* ← Fuerza scroll en el contenedor */
+    display: block !important;
 }
 
 /* ===========================
