@@ -68,16 +68,16 @@ body {
 }
 
 .fc-amarillo {
-    background: linear-gradient(135deg, #fff6e0, #ffedc2);
+    background: #fff6e0;  /* ← Recomendado */
 }
 
 .fc-azul {
-    background: linear-gradient(135deg, #eaf2ff, #dce9ff);
+    background: #eaf2ff;  /* ← Recomendado */
     margin-top: 0;
 }
 
 .fc-morado {
-    background: linear-gradient(135deg, #f2edfb, #e9e0f9);
+    background: #f2edfb;  /* ← Recomendado */
     margin-top: 0;
 }
 
