@@ -125,12 +125,14 @@ body {
     gap: 14px;
 }
 
+/* ===== CONTENEDOR DE ETIQUETAS ===== */
 .fc-tags {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
+/* ===== CADA ETIQUETA ===== */
 .fc-tag {
     display: flex;
     align-items: center;
@@ -139,10 +141,13 @@ body {
     color: #374151;
 }
 
+/* ===== ICONO PEQUEÑO CON FONDO ELIMINADO ===== */
 .fc-tag img {
     width: 18px;
     height: 18px;
     object-fit: contain;
+    mix-blend-mode: multiply !important; /* ← Elimina el blanco */
+    background: transparent !important;   /* ← Fondo transparente */
 }
 
 .btn-consultar {
