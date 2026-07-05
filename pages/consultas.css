@@ -30,9 +30,9 @@ body {
 =========================== */
 
 .header-card {
-    background: #0066cc !important;
+    background: #0066cc;
     padding: 24px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     color: white;
     position: relative;
 }
@@ -67,96 +67,92 @@ body {
 =========================== */
 
 .forecast-card {
-    border-radius: 22px;
-    padding: 20px;
-    margin-top: -40px;
+    border-radius: 20px;
+    padding: 22px;
     margin-bottom: 16px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .fc-amarillo {
-    background: #fff6e0;  /* ← Recomendado */
+    background: #fff6e0;
 }
 
 .fc-azul {
-    background: #eaf2ff;  /* ← Recomendado */
-    margin-top: 0;
+    background: #eaf2ff;
 }
 
 .fc-morado {
-    background: #f2edfb;  /* ← Recomendado */
-    margin-top: 0;
+    background: #f2edfb;
 }
 
 .fc-top {
     display: flex;
+    align-items: flex-start;
     gap: 14px;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
 }
 
 .fc-icon {
-    width: 64px;
-    height: 64px;
-    min-width: 64px;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent !important;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .fc-icon img {
-    width: 100%;
-    height: 100%;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
-    mix-blend-mode: multiply !important; /* ← Elimina el fondo blanco */
+}
+
+.fc-text {
+    padding-top: 4px;
 }
 
 .fc-text h3 {
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 700;
     color: #172554;
     margin: 0 0 6px;
+    line-height: 1.25;
 }
 
 .fc-text p {
     font-size: 14px;
     color: #4b5563;
-    line-height: 1.4;
+    line-height: 1.45;
     margin: 0;
 }
 
 .fc-bottom {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
 }
 
-/* ===== CONTENEDOR DE ETIQUETAS ===== */
 .fc-tags {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 
-/* ===== CADA ETIQUETA ===== */
 .fc-tag {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     font-size: 13px;
     color: #374151;
+    white-space: nowrap;
 }
 
-/* ===== ICONO PEQUEÑO CON FONDO ELIMINADO ===== */
 .fc-tag img {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     object-fit: contain;
-    mix-blend-mode: multiply !important; /* ← Elimina el blanco */
-    background: transparent !important;   /* ← Fondo transparente */
 }
 
 .btn-consultar {
@@ -165,66 +161,17 @@ body {
     border: none;
     border-radius: 14px;
     padding: 14px 20px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     width: 100%;
     transition: transform 0.2s ease;
 }
 
 .btn-consultar:active {
     transform: scale(0.97);
-}
-
-/* ===========================
-   ESCALADO EN PANTALLAS GRANDES
-=========================== */
-@media (min-width: 700px) {
-
-    .principal-wrap {
-        max-width: 900px;
-        padding: 30px;
-    }
-
-    .header-card {
-        padding: 40px;
-        padding-bottom: 80px;
-    }
-
-    .header-card h2 {
-        font-size: 42px;
-    }
-
-    .header-card p {
-        font-size: 18px;
-        max-width: 60%;
-    }
-
-    .forecast-card {
-        margin-top: -50px;
-    }
-
-    .fc-azul, .fc-morado {
-        margin-top: 20px;
-    }
-
-    .fc-bottom {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .fc-tags {
-        flex-direction: row;
-        gap: 24px;
-    }
-
-    .btn-consultar {
-        width: auto;
-        padding: 14px 28px;
-    }
 }
