@@ -88,26 +88,21 @@ body {
 }
 
 .fc-icon {
-    width: 64px !important;
-    height: 64px !important;
-    min-width: 64px !important;
-    border-radius: 50% !important;
-    background: rgba(255, 255, 255, 0.6) !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: hidden !important;  /* ← FORZADO */
-    position: relative !important;
-    z-index: 1 !important;
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .fc-icon img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important; /* ← FORZADO */
-    display: block !important;    /* ← NUEVO: elimina espacios */
-    max-width: 100% !important;   /* ← NUEVO: evita desborde */
-    max-height: 100% !important;  /* ← NUEVO: evita desborde */
+    width: 100%;       /* = 64px */
+    height: 100%;      /* = 64px */
+    object-fit: cover;
 }
 
 .fc-text h3 {
