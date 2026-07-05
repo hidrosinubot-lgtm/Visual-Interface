@@ -92,21 +92,22 @@ body {
     margin-bottom: 18px;
 }
 
-.fc-icon {
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
+..fc-icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.6);
+    background: transparent !important;
 }
 
 .fc-icon img {
-    width: 34px;
-    height: 34px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    mix-blend-mode: multiply !important; /* ← Elimina el fondo blanco */
 }
 
 .fc-text {
@@ -149,10 +150,13 @@ body {
     white-space: nowrap;
 }
 
+/* ===== ICONO PEQUEÑO CON FONDO ELIMINADO ===== */
 .fc-tag img {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
+    mix-blend-mode: multiply !important; /* ← Elimina el blanco */
+    background: transparent !important;   /* ← Fondo transparente */
 }
 
 .btn-consultar {
