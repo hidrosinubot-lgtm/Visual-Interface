@@ -3,6 +3,10 @@ body {
     background: #f7f9fc;
     margin: 0;
     animation: fadeInPrincipal 0.5s ease forwards;
+    /* ===== SOLO AÑADIR ESTO ===== */
+    min-height: 100vh;
+    height: auto;
+    overflow-y: scroll;
 }
 
 @keyframes fadeInPrincipal {
@@ -14,6 +18,11 @@ body {
     max-width: 480px;
     margin: 0 auto;
     padding: 16px;
+    /* ===== SOLO AÑADIR ESTO ===== */
+    min-height: 100vh;
+    height: auto;
+    overflow-y: scroll;
+    padding-bottom: 60px;
 }
 
 /* ===========================
