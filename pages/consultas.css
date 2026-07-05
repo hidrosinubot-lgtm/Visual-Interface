@@ -96,12 +96,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;  /* ← NUEVO: recorta la imagen */
 }
 
 .fc-icon img {
-    width: 55px;
-    height: 55px;
-    object-fit: contain;
+    width: 100%;       /* ← CAMBIO: ocupa todo el contenedor */
+    height: 100%;      /* ← CAMBIO: ocupa todo el contenedor */
+    object-fit: cover; /* ← CAMBIO: llena el círculo sin deformar */
 }
 
 .fc-text h3 {
