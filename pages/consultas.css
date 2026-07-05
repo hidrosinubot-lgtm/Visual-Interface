@@ -95,14 +95,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: transparent !important;
 }
 
 .fc-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    background: transparent !important;  /* ← Fondo transparente */
-    mix-blend-mode: multiply;            /* ← Elimina fondos blancos */
+    mix-blend-mode: multiply !important; /* ← Elimina el fondo blanco */
 }
 
 .fc-text h3 {
