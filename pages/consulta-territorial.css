@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background: #f4f7fc;
-    padding: 20px;
+    padding: 17px;
     margin: 0;
 }
 
@@ -12,7 +12,7 @@ body {
     background: transparent;
     box-shadow: none;
     border-radius: 0;
-    padding: 20px 0;
+    padding: 17px 0;
     text-align: center;
     animation: fadeInPage 0.6s ease forwards;
 }
@@ -40,20 +40,20 @@ body {
 
 .icon-logo {
     display: block;
-    width: 250px !important;
-    height: 250px !important;
+    width: 213px !important;
+    height: 213px !important;
     object-fit: cover;
-    margin: 10px auto 20px;
+    margin: 9px auto 17px;
     border: none !important;
-    outline: none !important;   /* ← Agrega esto */
-    box-shadow: none !important; /* ← Agrega esto */
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 h1 {
     text-align: center;
     color: #0b1f5f;
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -61,26 +61,26 @@ p {
     text-align: center;
     color: #6b7280;
     line-height: 1.5;
-    font-size: 14px;
-    margin-top: 8px;
+    font-size: 12px;
+    margin-top: 7px;
 }
 
 label {
     display: block;
     text-align: left;
-    margin-top: 24px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 7px;
     font-weight: 700;
     color: #0b1f5f;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .selector {
     width: 100%;
-    padding: 16px 44px 16px 16px;
+    padding: 14px 37px 14px 14px;
     border: 1px solid #d8deea;
-    border-radius: 16px;
-    font-size: 16px;
+    border-radius: 14px;
+    font-size: 14px;
     background: white;
     box-sizing: border-box;
     cursor: pointer;
@@ -97,10 +97,10 @@ label {
 .selector::after {
     content: "";
     position: absolute;
-    right: 18px;
+    right: 15px;
     top: 50%;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-right: 2px solid #6b7280;
     border-bottom: 2px solid #6b7280;
     transform: translateY(-65%) rotate(45deg);
@@ -113,13 +113,13 @@ label {
 
 button {
     width: 100%;
-    margin-top: 30px;
-    padding: 18px;
+    margin-top: 26px;
+    padding: 15px;
     border: none;
-    border-radius: 16px;
+    border-radius: 14px;
     background: #cfd6df;
     color: #8b97a7;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: bold;
     cursor: not-allowed;
     transition: all 0.3s ease;
@@ -161,9 +161,9 @@ button.activo:hover {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    max-width: 420px;
+    max-width: 357px;
     background: white;
-    border-radius: 20px;
+    border-radius: 17px;
     overflow: hidden;
     max-height: 80vh;
     overflow-y: auto;
@@ -176,8 +176,8 @@ button.activo:hover {
 }
 
 .modal-header {
-    padding: 20px;
-    font-size: 22px;
+    padding: 17px;
+    font-size: 19px;
     font-weight: bold;
     border-bottom: 1px solid #e5e7eb;
     color: #0b1f5f;
@@ -185,17 +185,17 @@ button.activo:hover {
 }
 
 .option {
-    padding: 20px;
+    padding: 17px;
     border-bottom: 1px solid #e5e7eb;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
     transition: all 0.2s ease;
     color: #1a1a2e;
 }
 
 .option:hover {
     background: #f0f6ff;
-    padding-left: 24px;
+    padding-left: 20px;
 }
 
 .option.selected {
