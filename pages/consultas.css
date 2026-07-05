@@ -67,13 +67,10 @@ body {
 =========================== */
 
 .forecast-card {
-    border-radius: 22px;
-    padding: 20px;
-    margin-top: -40px;
+    border-radius: 20px;
+    padding: 22px;
     margin-bottom: 16px;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .fc-amarillo {
