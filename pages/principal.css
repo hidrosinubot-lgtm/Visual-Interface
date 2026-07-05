@@ -127,11 +127,12 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;  /* ← IMPORTANTE: recorta lo que sobresale */
 }
 
 .logo-container img {
-    width: 50px;
-    height: 50px;
+    width: 55px;       /* ← MÁS GRANDE que el contenedor */
+    height: 55px;
     object-fit: contain;
 }
 
