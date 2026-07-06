@@ -33,13 +33,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 17px;
-    padding: 28px;
+    border-radius: 16px;          /* ← 17px * 0.95 = 16.15px → 16px */
+    padding: 27px;                /* ← 28px * 0.95 = 26.6px → 27px */
     color: white;
-    min-height: 238px;
+    min-height: 226px;            /* ← 238px * 0.95 = 226.1px → 226px */
     display: flex;
     align-items: center;
-    box-shadow: 0 11px 21px rgba(0, 102, 204, .25);
+    box-shadow: 0 10px 20px rgba(0, 102, 204, .25); /* ← 11px*0.95=10.45px, 21px*0.95=19.95px */
 }
 
 .consulta-info {
@@ -48,24 +48,24 @@ body {
 
 .badge {
     display: inline-block;
-    padding: 4px 10px;
-    border-radius: 14px;
+    padding: 4px 10px;            /* ← 4px*0.95=3.8px, 10px*0.95=9.5px */
+    border-radius: 13px;          /* ← 14px * 0.95 = 13.3px → 13px */
     background: rgba(255, 255, 255, .18);
-    font-size: 9px;
+    font-size: 9px;               /* ← 9px * 0.95 = 8.55px → 9px */
     font-weight: 600;
-    margin-bottom: 11px;
+    margin-bottom: 10px;          /* ← 11px * 0.95 = 10.45px → 10px */
 }
 
 .consulta-info h2 {
-    font-size: 34px;
+    font-size: 32px;              /* ← 34px * 0.95 = 32.3px → 32px */
     font-weight: 800;
-    margin: 0 0 8px;
+    margin: 0 0 8px;              /* ← 8px * 0.95 = 7.6px → 8px */
 }
 
 .consulta-info p {
-    font-size: 14px;
+    font-size: 13px;              /* ← 14px * 0.95 = 13.3px → 13px */
     line-height: 1.5;
-    margin: 0 0 14px;
+    margin: 0 0 13px;             /* ← 14px * 0.95 = 13.3px → 13px */
     color: rgba(255, 255, 255, 0.92);
 }
 
@@ -73,14 +73,14 @@ body {
     background: white;
     color: #0066cc;
     border: none;
-    border-radius: 11px;
-    padding: 11px 18px;
-    font-size: 11px;
+    border-radius: 10px;          /* ← 11px * 0.95 = 10.45px → 10px */
+    padding: 10px 17px;           /* ← 11px*0.95=10.45px, 18px*0.95=17.1px */
+    font-size: 10px;              /* ← 11px * 0.95 = 10.45px → 10px */
     font-weight: 700;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 7px;                     /* ← 7px * 0.95 = 6.65px → 7px */
     transition: transform 0.2s ease;
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 .btn-arrow {
-    font-size: 13px;
+    font-size: 12px;              /* ← 13px * 0.95 = 12.35px → 12px */
 }
 
 /* ===========================
@@ -157,7 +157,7 @@ body {
 }
 
 .card-text p {
-    font-size: 9px;
+    font-size: 10px;
     color: #6b7280;
     line-height: 1.4;
     margin: 0;
