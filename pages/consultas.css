@@ -179,7 +179,7 @@ body {
 /* ===========================
    ESCALADO EN PANTALLAS GRANDES
 =========================== */
-@media (min-width: 70px) {
+@media (min-width: 20px) {
 
     .principal-wrap {
         max-width: 900px;
