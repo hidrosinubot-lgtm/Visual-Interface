@@ -33,8 +33,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 0;          /* ← 17px * 0.95 = 16.15px → 16px */
-    padding: 0 ¡important;                /* ← 28px * 0.95 = 26.6px → 27px */
+    border-radius: 14;          /* ← 17px * 0.95 = 16.15px → 16px */
+    padding: 0;                /* ← 28px * 0.95 = 26.6px → 27px */
     color: white;
     min-height: 226px;            /* ← 238px * 0.95 = 226.1px → 226px */
     display: flex;
@@ -107,7 +107,7 @@ body {
     flex-direction: row;
     align-items: center;
     border-radius: 14px;
-    padding: 10px ¡important;
+    padding: 18px;
     display: flex;
     gap: 10px;
 }
