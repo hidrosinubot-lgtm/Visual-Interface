@@ -16,7 +16,7 @@ body {
 .principal-wrap {
     max-width: 900px;
     margin: 0 auto;
-    padding: 21px;
+    padding: 10px;
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
@@ -33,8 +33,8 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 16px;          /* ← 17px * 0.95 = 16.15px → 16px */
-    padding: 27px;                /* ← 28px * 0.95 = 26.6px → 27px */
+    border-radius: 0px;          /* ← 17px * 0.95 = 16.15px → 16px */
+    padding: 10px;                /* ← 28px * 0.95 = 26.6px → 27px */
     color: white;
     min-height: 226px;            /* ← 238px * 0.95 = 226.1px → 226px */
     display: flex;
