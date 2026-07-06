@@ -23,7 +23,7 @@ body {
 }
 
 /* ===========================
-   TARJETA PRINCIPAL (HERO) - SIN ESPACIOS
+   TARJETA PRINCIPAL (HERO)
 =========================== */
 
 .consulta-card {
@@ -33,15 +33,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 0;           /* ← SIN BORDES REDONDEADOS */
-    padding: 0;                 /* ← SIN PADDING INTERNO */
+    border-radius: 0 ¡important;          /* ← 17px * 0.95 = 16.15px → 16px */
+    padding: 0;                /* ← 28px * 0.95 = 26.6px → 27px */
     color: white;
-    min-height: 340px;
+    min-height: 226px;            /* ← 238px * 0.95 = 226.1px → 226px */
     display: flex;
     align-items: center;
-    box-shadow: none;           /* ← SIN SOMBRA */
-    margin: 0;                  /* ← SIN MARGEN */
-    width: 100%;                /* ← OCUPA TODO EL ANCHO */
+    box-shadow: 0 10px 20px rgba(0, 102, 204, .25); /* ← 11px*0.95=10.45px, 21px*0.95=19.95px */
 }
 
 .consulta-info {
@@ -150,26 +148,19 @@ body {
     flex: 1;
 }
 
-/* ===== TÍTULO: UNA SOLA LÍNEA ===== */
 .card-text h3 {
     font-size: 12px;
     font-weight: 700;
     color: #172554;
     margin: 0 0 3px;
     line-height: 1.25;
-    white-space: nowrap;        /* ← Solo para el TÍTULO */
-    overflow: hidden;           /* ← Solo para el TÍTULO */
-    text-overflow: ellipsis;    /* ← Solo para el TÍTULO (agrega "...") */
 }
 
-/* ===== DESCRIPCIÓN: SIN CAMBIOS ===== */
 .card-text p {
     font-size: 10px;
     color: #6b7280;
     line-height: 1.4;
     margin: 0;
-    /* ← SIN white-space, SIN overflow, SIN text-overflow */
-    /* La descripción puede seguir en varias líneas */ 
 }
 
 .arrow {
