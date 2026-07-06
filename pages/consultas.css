@@ -3,7 +3,6 @@ body {
     background: #f7f9fc;
     margin: 0;
     animation: fadeInConsultas 0.5s ease forwards;
-    /* ===== SOLO AÑADIR ESTO ===== */
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
@@ -15,14 +14,12 @@ body {
 }
 
 .principal-wrap {
-    max-width: 480px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 16px;
-    /* ===== SOLO AÑADIR ESTO ===== */
+    padding: 30px;
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
-    padding-bottom: 60px;
 }
 
 /* ===========================
@@ -31,8 +28,8 @@ body {
 
 .header-card {
     background: #0066cc;
-    padding: 24px;
-    padding-bottom: 30px;
+    padding: 40px;
+    padding-bottom: 80px;
     color: white;
     position: relative;
 }
@@ -49,17 +46,17 @@ body {
 }
 
 .header-card h2 {
-    font-size: 30px;
+    font-size: 42px;
     font-weight: 800;
     margin: 0 0 10px;
 }
 
 .header-card p {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.5;
     margin: 0;
     color: rgba(255, 255, 255, 0.92);
-    max-width: 80%;
+    max-width: 60%;
 }
 
 /* ===========================
@@ -69,22 +66,23 @@ body {
 .forecast-card {
     border-radius: 20px;
     padding: 22px;
+    margin-top: -50px;
     margin-bottom: 16px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .fc-amarillo {
-    background: #fff6e0;  /* ← Recomendado */
+    background: #fff6e0;
 }
 
 .fc-azul {
-    background: #eaf2ff;  /* ← Recomendado */
-    margin-top: 0;
+    background: #eaf2ff;
+    margin-top: 20px;
 }
 
 .fc-morado {
-    background: #f2edfb;  /* ← Recomendado */
-    margin-top: 0;
+    background: #f2edfb;
+    margin-top: 20px;
 }
 
 .fc-top {
@@ -102,14 +100,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent !important;
+    background: transparent;
 }
 
 .fc-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    mix-blend-mode: multiply !important; /* ← Elimina el fondo blanco */
+    mix-blend-mode: multiply;
 }
 
 .fc-text h3 {
@@ -128,15 +126,17 @@ body {
 
 .fc-bottom {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     gap: 14px;
 }
 
 /* ===== CONTENEDOR DE ETIQUETAS ===== */
 .fc-tags {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 24px;
 }
 
 /* ===== CADA ETIQUETA ===== */
@@ -147,13 +147,14 @@ body {
     font-size: 13px;
     color: #374151;
 }
+
 /* ===== ICONO PEQUEÑO CON FONDO ELIMINADO ===== */
 .fc-tag img {
     width: 18px;
     height: 18px;
     object-fit: contain;
-    mix-blend-mode: multiply !important; /* ← Elimina el blanco */
-    background: transparent !important;   /* ← Fondo transparente */
+    mix-blend-mode: multiply;
+    background: transparent;
 }
 
 .btn-consultar {
@@ -161,7 +162,7 @@ body {
     color: white;
     border: none;
     border-radius: 14px;
-    padding: 14px 20px;
+    padding: 14px 28px;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
@@ -169,7 +170,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    width: 100%;
+    width: auto;
     transition: transform 0.2s ease;
 }
 
