@@ -2,178 +2,238 @@ body {
     font-family: Arial, sans-serif;
     background: #f7f9fc;
     margin: 0;
-    animation: fadeInConsultas 0.5s ease forwards;
+    animation: fadeInPrincipal 0.5s ease forwards;
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
 }
 
-@keyframes fadeInConsultas {
+@keyframes fadeInPrincipal {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 .principal-wrap {
-    max-width: 900px;
+    max-width: 480px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 11px;
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
+    padding-bottom: 42px;
 }
 
 /* ===========================
-   ENCABEZADO (HERO)
+   TARJETA PRINCIPAL (HERO)
 =========================== */
 
-.header-card {
-    background: #0066cc;
-    padding: 40px;
-    padding-bottom: 80px;
+.consulta-card {
+    background-image:
+        linear-gradient(160deg, rgba(0, 82, 204, 0.55), rgba(0, 40, 130, 0.75)),
+        url('../assets/images/consulta-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 17px;
+    padding: 17px;
     color: white;
-    position: relative;
-}
-
-.btn-back {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 0;
-    margin-bottom: 20px;
-    width: auto;
-}
-
-.header-card h2 {
-    font-size: 42px;
-    font-weight: 800;
-    margin: 0 0 10px;
-}
-
-.header-card p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.92);
-    max-width: 60%;
-}
-
-/* ===========================
-   TARJETAS DE PRONÓSTICO
-=========================== */
-
-.forecast-card {
-    border-radius: 20px;
-    padding: 22px;
-    margin-top: -50px;
-    margin-bottom: 16px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
-
-.fc-amarillo {
-    background: #fff6e0;
-}
-
-.fc-azul {
-    background: #eaf2ff;
-    margin-top: 20px;
-}
-
-.fc-morado {
-    background: #f2edfb;
-    margin-top: 20px;
-}
-
-.fc-top {
+    min-height: 210px;
     display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 17px;
+    align-items: center;
+    box-shadow: 0 11px 21px rgba(0, 102, 204, .25);
 }
 
-.fc-icon {
-    width: 64px;
-    height: 64px;
-    min-width: 64px;
+.consulta-info {
+    width: 100%;
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .18);
+    font-size: 9px;
+    font-weight: 600;
+    margin-bottom: 11px;
+}
+
+.consulta-info h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 8px;
+}
+
+.consulta-info p {
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.btn-consulta {
+    background: white;
+    color: #0066cc;
+    border: none;
+    border-radius: 11px;
+    padding: 11px 18px;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: transform 0.2s ease;
+}
+
+.btn-consulta:active {
+    transform: scale(0.97);
+}
+
+.btn-arrow {
+    font-size: 13px;
+}
+
+/* ===========================
+   TARJETAS INFERIORES
+=========================== */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.card {
+    border-radius: 14px;
+    padding: 11px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-verde {
+    background: #eafbf1;
+}
+
+.card-naranja {
+    background: #fdf3e7;
+}
+
+.card-morado {
+    background: #f4f0fb;
+}
+
+.logo-container {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
     border-radius: 50%;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
-.fc-icon img {
-    width: 100%;
-    height: 100%;
+.logo-container img {
+    width: 39px;
+    height: 39px;
     object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
-.fc-text h3 {
-    font-size: 19px;
+.card-text {
+    flex: 1;
+}
+
+.card-text h3 {
+    font-size: 12px;
     font-weight: 700;
     color: #172554;
-    margin: 0 0 6px;
+    margin: 0 0 3px;
+    line-height: 1.25;
 }
 
-.fc-text p {
-    font-size: 14px;
-    color: #4b5563;
+.card-text p {
+    font-size: 9px;
+    color: #6b7280;
     line-height: 1.4;
     margin: 0;
 }
 
-.fc-bottom {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-}
-
-/* ===== CONTENEDOR DE ETIQUETAS ===== */
-.fc-tags {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
-
-/* ===== CADA ETIQUETA ===== */
-.fc-tag {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: #374151;
-}
-
-/* ===== ICONO PEQUEÑO CON FONDO ELIMINADO ===== */
-.fc-tag img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    background: transparent;
-}
-
-.btn-consultar {
-    background: linear-gradient(135deg, #0066cc, #0048b3);
-    color: white;
-    border: none;
-    border-radius: 14px;
-    padding: 14px 28px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
+.arrow {
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
+    border-radius: 50%;
+    background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    width: auto;
-    transition: transform 0.2s ease;
+    font-size: 11px;
+    color: #0066cc;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.06);
 }
 
+/* ===========================
+   ESCALADO EN PANTALLAS GRANDES
+=========================== */
+@media (min-width: 70px) {
+
+    .principal-wrap {
+        max-width: 900px;
+        padding: 21px;
+    }
+
+    .consulta-card {
+        padding: 28px;
+        min-height: 238px;
+    }
+
+    .consulta-info {
+        max-width: 55%;
+    }
+
+    .consulta-info h2 {
+        font-size: 34px;
+    }
+
+    .consulta-info p {
+        font-size: 14px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 182px;
+        padding: 18px;
+    }
+
+    .logo-container {
+        width: 63px;
+        height: 63px;
+        min-width: 63px;
+        margin-bottom: 14px;
+    }
+
+    .logo-container img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .arrow {
+        margin-top: auto;
+        align-self: flex-end;
+        width: 35px;
+        height: 35px;
+        min-width: 35px;
+    }
+}
 .btn-consultar:active {
     transform: scale(0.97);
 }
