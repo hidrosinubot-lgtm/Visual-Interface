@@ -3,7 +3,6 @@ body {
     background: #f7f9fc;
     margin: 0;
     animation: fadeInPrincipal 0.5s ease forwards;
-    /* ===== SOLO AÑADIR ESTO ===== */
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
@@ -15,14 +14,13 @@ body {
 }
 
 .principal-wrap {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 16px;
-    /* ===== SOLO AÑADIR ESTO ===== */
+    max-width: 480px !important;
+    margin: 0 auto !important;
+    padding: 11px !important;
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
-    padding-bottom: 60px;
+    padding-bottom: 42px !important;
 }
 
 /* ===========================
@@ -36,39 +34,39 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 24px;
-    padding: 24px;
+    border-radius: 17px !important;
+    padding: 17px !important;
     color: white;
-    min-height: 300px;
+    min-height: 210px !important;
     display: flex;
     align-items: center;
-    box-shadow: 0 15px 30px rgba(0, 102, 204, .25);
+    box-shadow: 0 11px 21px rgba(0, 102, 204, .25);
 }
 
 .consulta-info {
-    width: 100%;
+    width: 100% !important;
 }
 
 .badge {
     display: inline-block;
-    padding: 6px 14px;
-    border-radius: 20px;
+    padding: 4px 10px !important;
+    border-radius: 14px !important;
     background: rgba(255, 255, 255, .18);
-    font-size: 13px;
+    font-size: 9px !important;
     font-weight: 600;
-    margin-bottom: 16px;
+    margin-bottom: 11px !important;
 }
 
 .consulta-info h2 {
-    font-size: 34px;
+    font-size: 24px !important;
     font-weight: 800;
-    margin: 0 0 12px;
+    margin: 0 0 8px !important;
 }
 
 .consulta-info p {
-    font-size: 15px;
+    font-size: 11px !important;
     line-height: 1.5;
-    margin: 0 0 20px;
+    margin: 0 0 14px !important;
     color: rgba(255, 255, 255, 0.92);
 }
 
@@ -76,14 +74,14 @@ body {
     background: white;
     color: #0066cc;
     border: none;
-    border-radius: 16px;
-    padding: 15px 26px;
-    font-size: 16px;
+    border-radius: 11px !important;
+    padding: 11px 18px !important;
+    font-size: 11px !important;
     font-weight: 700;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 7px !important;
     transition: transform 0.2s ease;
 }
 
@@ -92,7 +90,7 @@ body {
 }
 
 .btn-arrow {
-    font-size: 18px;
+    font-size: 13px !important;
 }
 
 /* ===========================
@@ -102,16 +100,16 @@ body {
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    margin-top: 20px;
+    gap: 10px !important;
+    margin-top: 14px !important;
 }
 
 .card {
-    border-radius: 20px;
-    padding: 16px;
+    border-radius: 14px !important;
+    padding: 11px !important;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px !important;
 }
 
 .card-verde {
@@ -127,21 +125,21 @@ body {
 }
 
 .logo-container {
-    width: 65px;
-    height: 65px;
-    min-width: 65px;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
     border-radius: 50%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-    overflow: hidden;  /* ← IMPORTANTE: recorta lo que sobresale */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
 }
 
 .logo-container img {
-    width: 55px;       /* ← MÁS GRANDE que el contenedor */
-    height: 55px;
+    width: 39px !important;
+    height: 39px !important;
     object-fit: contain;
 }
 
@@ -150,32 +148,32 @@ body {
 }
 
 .card-text h3 {
-    font-size: 17px;
+    font-size: 12px !important;
     font-weight: 700;
     color: #172554;
-    margin: 0 0 4px;
+    margin: 0 0 3px !important;
     line-height: 1.25;
 }
 
 .card-text p {
-    font-size: 13px;
+    font-size: 9px !important;
     color: #6b7280;
     line-height: 1.4;
     margin: 0;
 }
 
 .arrow {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
+    width: 27px !important;
+    height: 27px !important;
+    min-width: 27px !important;
     border-radius: 50%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 11px !important;
     color: #0066cc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.06);
 }
 
 /* ===========================
@@ -184,25 +182,25 @@ body {
 @media (min-width: 70px) {
 
     .principal-wrap {
-        max-width: 900px;
-        padding: 30px;
+        max-width: 900px !important;
+        padding: 21px !important;
     }
 
     .consulta-card {
-        padding: 40px;
-        min-height: 340px;
+        padding: 28px !important;
+        min-height: 238px !important;
     }
 
     .consulta-info {
-        max-width: 55%;
+        max-width: 55% !important;
     }
 
     .consulta-info h2 {
-        font-size: 48px;
+        font-size: 34px !important;
     }
 
     .consulta-info p {
-        font-size: 20px;
+        font-size: 14px !important;
     }
 
     .cards {
@@ -212,27 +210,27 @@ body {
     .card {
         flex-direction: column;
         align-items: flex-start;
-        min-height: 260px;
-        padding: 25px;
+        min-height: 182px !important;
+        padding: 18px !important;
     }
 
     .logo-container {
-        width: 90px;
-        height: 90px;
-        min-width: 90px;
-        margin-bottom: 20px;
+        width: 63px !important;
+        height: 63px !important;
+        min-width: 63px !important;
+        margin-bottom: 14px !important;
     }
 
     .logo-container img {
-        width: 50px;
-        height: 50px;
+        width: 35px !important;
+        height: 35px !important;
     }
 
     .arrow {
         margin-top: auto;
         align-self: flex-end;
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
+        width: 35px !important;
+        height: 35px !important;
+        min-width: 35px !important;
     }
 }
