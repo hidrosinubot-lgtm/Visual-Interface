@@ -14,13 +14,12 @@ body {
 }
 
 .principal-wrap {
-    max-width: 480px !important;
-    margin: 0 auto !important;
-    padding: 11px !important;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 21px;
     min-height: 100vh;
     height: auto;
     overflow-y: scroll;
-    padding-bottom: 42px !important;
 }
 
 /* ===========================
@@ -34,39 +33,39 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 17px !important;
-    padding: 17px !important;
+    border-radius: 17px;
+    padding: 28px;
     color: white;
-    min-height: 210px !important;
+    min-height: 238px;
     display: flex;
     align-items: center;
     box-shadow: 0 11px 21px rgba(0, 102, 204, .25);
 }
 
 .consulta-info {
-    width: 100% !important;
+    max-width: 55%;
 }
 
 .badge {
     display: inline-block;
-    padding: 4px 10px !important;
-    border-radius: 14px !important;
+    padding: 4px 10px;
+    border-radius: 14px;
     background: rgba(255, 255, 255, .18);
-    font-size: 9px !important;
+    font-size: 9px;
     font-weight: 600;
-    margin-bottom: 11px !important;
+    margin-bottom: 11px;
 }
 
 .consulta-info h2 {
-    font-size: 24px !important;
+    font-size: 34px;
     font-weight: 800;
-    margin: 0 0 8px !important;
+    margin: 0 0 8px;
 }
 
 .consulta-info p {
-    font-size: 11px !important;
+    font-size: 14px;
     line-height: 1.5;
-    margin: 0 0 14px !important;
+    margin: 0 0 14px;
     color: rgba(255, 255, 255, 0.92);
 }
 
@@ -74,14 +73,14 @@ body {
     background: white;
     color: #0066cc;
     border: none;
-    border-radius: 11px !important;
-    padding: 11px 18px !important;
-    font-size: 11px !important;
+    border-radius: 11px;
+    padding: 11px 18px;
+    font-size: 11px;
     font-weight: 700;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 7px !important;
+    gap: 7px;
     transition: transform 0.2s ease;
 }
 
@@ -90,7 +89,7 @@ body {
 }
 
 .btn-arrow {
-    font-size: 13px !important;
+    font-size: 13px;
 }
 
 /* ===========================
@@ -100,16 +99,17 @@ body {
 .cards {
     display: flex;
     flex-direction: column;
-    gap: 10px !important;
-    margin-top: 14px !important;
+    gap: 10px;
+    margin-top: 14px;
 }
 
 .card {
-    border-radius: 14px !important;
-    padding: 11px !important;
-    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 10px !important;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    gap: 10px;
 }
 
 .card-verde {
@@ -125,9 +125,10 @@ body {
 }
 
 .logo-container {
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
+    width: 63px;
+    height: 63px;
+    min-width: 63px;
+    margin-bottom: 0;
     border-radius: 50%;
     background: white;
     display: flex;
@@ -138,8 +139,8 @@ body {
 }
 
 .logo-container img {
-    width: 39px !important;
-    height: 39px !important;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
 }
 
@@ -148,89 +149,32 @@ body {
 }
 
 .card-text h3 {
-    font-size: 12px !important;
+    font-size: 12px;
     font-weight: 700;
     color: #172554;
-    margin: 0 0 3px !important;
+    margin: 0 0 3px;
     line-height: 1.25;
 }
 
 .card-text p {
-    font-size: 9px !important;
+    font-size: 9px;
     color: #6b7280;
     line-height: 1.4;
     margin: 0;
 }
 
 .arrow {
-    width: 27px !important;
-    height: 27px !important;
-    min-width: 27px !important;
+    margin-top: 0;
+    align-self: center;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
     border-radius: 50%;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px !important;
+    font-size: 11px;
     color: #0066cc;
     box-shadow: 0 3px 7px rgba(0, 0, 0, 0.06);
-}
-
-/* ===========================
-   ESCALADO EN PANTALLAS GRANDES
-=========================== */
-@media (min-width: 70px) {
-
-    .principal-wrap {
-        max-width: 900px !important;
-        padding: 21px !important;
-    }
-
-    .consulta-card {
-        padding: 28px !important;
-        min-height: 238px !important;
-    }
-
-    .consulta-info {
-        max-width: 55% !important;
-    }
-
-    .consulta-info h2 {
-        font-size: 34px !important;
-    }
-
-    .consulta-info p {
-        font-size: 14px !important;
-    }
-
-    .cards {
-        flex-direction: row;
-    }
-
-    .card {
-        flex-direction: column;
-        align-items: flex-start;
-        min-height: 182px !important;
-        padding: 18px !important;
-    }
-
-    .logo-container {
-        width: 63px !important;
-        height: 63px !important;
-        min-width: 63px !important;
-        margin-bottom: 14px !important;
-    }
-
-    .logo-container img {
-        width: 35px !important;
-        height: 35px !important;
-    }
-
-    .arrow {
-        margin-top: auto;
-        align-self: flex-end;
-        width: 35px !important;
-        height: 35px !important;
-        min-width: 35px !important;
-    }
 }
