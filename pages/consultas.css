@@ -39,27 +39,20 @@ body {
     position: relative;
 }
 
-.header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-
 .btn-back {
     background: none;
     border: none;
     color: white;
-    font-size: 11px;
+    font-size: 18px;
     cursor: pointer;
     padding: 0;
-    line-height: 1;
+    margin-bottom: 12px;
 }
 
 .header-card h2 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 8px;
 }
 
 .header-card p {
