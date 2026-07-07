@@ -93,7 +93,7 @@ body {
 
 .fc-top {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
     margin-bottom: 12px;
 }
