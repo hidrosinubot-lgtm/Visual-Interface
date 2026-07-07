@@ -156,7 +156,9 @@ body {
     color: #172554;
     margin: 0 0 3px;
     line-height: 1.25;
-    white-space: nowrap;
+    white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-text p {
