@@ -99,9 +99,9 @@ body {
 }
 
 .fc-icon {
-    width: 69px;
-    height: 69px;
-    min-width: 69px;
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
     background: transparent;
     box-shadow: none;
     border-radius: 0;
@@ -111,8 +111,8 @@ body {
 }
 
 .fc-icon img {
-    width: 45px;
-    height: 45px;
+    width: 51px;
+    height: 51px;
     object-fit: contain;
     mix-blend-mode: multiply !important;
 }
