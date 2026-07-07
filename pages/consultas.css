@@ -112,8 +112,8 @@ body {
 }
 
 .fc-icon img {
-    width: 51px;
-    height: 51px;
+    width: 58px;
+    height: 58px;
     object-fit: contain;
     mix-blend-mode: multiply !important;
 }
